@@ -32,7 +32,7 @@
           <input class="btn btn-primary" type="submit" value="Cari">
         </div>
         <div class="col-1">
-          <a href="/report/export_excel" class="btn btn-primary">Export Excel</a>
+          <a href="/report/export_excel" class="btn btn-primary">Export To Excel</a>
         </div>
         <div class="col-1">
           <button class="btn btn-primary" onclick="printContent('div1')">Print To PDF</button>
@@ -47,6 +47,7 @@
           <thead>
             <tr>
               <th>Nomor</th>
+              <th>Modul_id</th>
               <th>Modul</th>
               <th>Jml&nbspTrx</th>
               <th>&nbsp&nbsp&nbspSPL&nbsp&nbsp&nbsp</th>
@@ -64,6 +65,7 @@
             @foreach ($report as $value)
             <tr>
               <td>{{$value->nomor}}</td>
+              <td>{{$value->modul_id}}</td>
               <td>{{$value->modul}}</td>
               <td>@currency($value->jml_trx)</td>
               <td>@currency($value->spl)</td>
@@ -80,6 +82,7 @@
           <tfoot>
             <td></td>
             <td>Total</td>
+            <td></td>
             <td>@currency($sum_jml_trx)</td>
             <td>@currency($sum_spl)</td>
             <td>@currency($sum_selisih_trx)</td>
