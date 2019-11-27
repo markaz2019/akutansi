@@ -24,7 +24,9 @@
           <input class="btn btn-primary" type="submit" value="Cari">
         </div>
         <div class="col-1"></div>
-        <div class="col-1"></div>
+        <div class="col-1">
+          <a href="/cari_nirwana_oto/export_excel" class="btn btn-primary">Export Excel</a>
+        </div>
         <div class="col-1">
           <button class="btn btn-primary" onclick="printContent('div1')">Print</button>
         </div>

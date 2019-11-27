@@ -28,3 +28,7 @@ Route::get('/kisel_baru/export_excel', 'KiselBaruController@export_excel');
 Route::get('/cari_kisel/export_excel', 'KiselBaruController@export_excel');
 Route::get('/kisel_selisih/export_excel', 'KiselSelisihController@export_excel');
 Route::get('/cari_kisel_selisih/export_excel', 'KiselSelisihController@export_excel');
+Route::get('/nirwana_oto/export_excel', 'NirwanaOtoController@export_excel');
+Route::get('/cari_nirwana_oto/export_excel', 'NirwanaOtoController@export_excel');
+Route::get('/hitung_nirwana/export_excel', 'HitungNirwanaController@export_excel');
+Route::get('/hitung_nirwana/export_excel', 'HitungNirwanaController@export_excel');

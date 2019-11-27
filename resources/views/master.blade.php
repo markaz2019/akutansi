@@ -62,7 +62,7 @@
       <li class="nav-item active">
         <a class="nav-link" href="{{ url('/') }}">
           <i class="fas fa-fw fa-table"></i>
-          <span>SPL</span></a>
+          <span>TELKOMSEL</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="{{ url('/kisel_baru') }}">
@@ -97,11 +97,11 @@
       <!-- Main Content -->
       <div id="content">
 
-      <br>
-      
+        <br>
+
         @yield('konten')
 
-        </div>
+      </div>
       <!-- End of Main Content -->
 
       <!-- Footer -->
@@ -121,14 +121,14 @@
   <!-- End of Page Wrapper -->
 
   <script>
-	function printContent(el){
-		var restorepage = document.body.innerHTML;
-		var printcontent = document.getElementById(el).innerHTML;
-		document.body.innerHTML = printcontent;
-		window.print();
-		document.body.innerHTML = restorepage;
-	}
-	</script>
+    function printContent(el) {
+      var restorepage = document.body.innerHTML;
+      var printcontent = document.getElementById(el).innerHTML;
+      document.body.innerHTML = printcontent;
+      window.print();
+      document.body.innerHTML = restorepage;
+    }
+  </script>
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -140,7 +140,7 @@
   <!-- Page level custom scripts -->
   <script src="js/demo/datatables-demo.js"></script>
 
-  
+
 
 </body>
 
