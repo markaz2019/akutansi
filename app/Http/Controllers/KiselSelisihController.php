@@ -28,6 +28,7 @@ class KiselSelisihController extends Controller
         $jml_500 = $kisel[0]->lima_ratus - $kisel[1]->lima_ratus;
         $jml_1000 = $kisel[0]->satu_juta - $kisel[1]->satu_juta;
 
+
         return view('kisel_selisih', compact('kisel', 'jml_15', 'jml_25', 'jml_10', 'jml_30', 'jml_40', 'jml_50', 'jml_75', 'jml_100', 'jml_150', 'jml_200', 'jml_300', 'jml_500', 'jml_1000'));
     }
 

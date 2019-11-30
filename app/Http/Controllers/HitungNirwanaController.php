@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Hitung_Nirwana;
+use App\Exports\ReportExport4;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Controllers\Controller;
 
 class HitungNirwanaController extends Controller
 {
@@ -27,5 +30,9 @@ class HitungNirwanaController extends Controller
         $title = "Sales From: " . $from . " To: " . $to;
         $sales = Hitung_Nirwana::whereBetween('tanggal', [$from . ' 00:00:00', $to . ' 23:59:59'])->get();
         return view('/cari_nirwana', ['sales' => $sales]);
+    }
+    public function export_excel()
+    {
+        return Excel::download(new ReportExport4, 'ReportNirwana.xlsx');
     }
 }

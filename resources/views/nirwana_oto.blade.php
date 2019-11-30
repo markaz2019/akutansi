@@ -19,50 +19,22 @@
       <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
-          <input type="text" name="from" placeholder="Mulai" onfocus="(this.type='date')">
-          <input type="text" name="to" placeholder="Sampai" onfocus="(this.type='date')">
+          <input class="form_date" type="text" name="from" placeholder="Mulai" onfocus="(this.type='date')">
+          <input class="form_date" type="text" name="to" placeholder="Sampai" onfocus="(this.type='date')">
           <input class="btn btn-primary" type="submit" value="Cari">
-        </div>
-        <div class="col-1"></div>
-        <div class="col-1"></div>
-        <div class="col-1">
-          <button class="btn btn-primary" onclick="printContent('div1')">Print</button>
         </div>
       </div>
     </form>
-    <hr>
-    <div class="card-body">
-      <div class="table-responsive" id="div1">
-        <table class="table table-bordered" width="100%" cellspacing="0">
-          <thead>
-            <tr>
-              <th>Keterangan</th>
-              <th>5K</th>
-              <th>10K</th>
-              <th>Tanggal</th>
-            </tr>
-          </thead>
-          <tbody>
-            @foreach ($report as $value)
-            <tr>
-              <td>{{$value->ket}}</td>
-              <td>@currency($value->lima)</td>
-              <td>@currency($value->sepuluh)</td>
-              <td>{{$value->tanggal}}</td>
-            </tr>
-            @endforeach
-          <tfoot>
-            <td>Selisih</td>
-            <td>@currency($jml_5)</td>
-            <td>@currency($jml_10)</td>
-            <td></td>
-          </tfoot>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
+    <br /><br />
 
-</div>
-<!-- /.container-fluid -->
-@endsection
+    <style>
+      .form_date {
+        width: 32% !important;
+        height: 100% !important;
+        border: 1px solid #cccccc !important;
+        border-radius: 11px !important;
+        text-align: center !important;
+      }
+    </style>
+    <!-- /.container-fluid -->
+    @endsection

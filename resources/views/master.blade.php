@@ -10,29 +10,20 @@
   <meta name="author" content="">
 
   <title>MARKAZ</title>
-
-  <!-- Custom fonts for this template -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-  <!-- Custom styles for this page -->
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
 
 </head>
 
+
 <body id="page-top">
-
-  <!-- Page Wrapper -->
   <div id="wrapper">
-
-    <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-      <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
@@ -43,12 +34,6 @@
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
 
-      <!-- Nav Item - Dashboard
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
-      </li> -->
 
       <!-- Divider -->
       <hr class="sidebar-divider">
@@ -59,32 +44,50 @@
       </div>
 
       <!-- Nav Item - Tables -->
+
       <li class="nav-item active">
         <a class="nav-link" href="{{ url('/') }}">
           <i class="fas fa-fw fa-table"></i>
-          <span>SPL</span></a>
+          <span>TELKOMSEL</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="{{ url('/kisel_baru') }}">
+        <a class="nav-link" href="{{ url('/mlink') }}">
           <i class="fas fa-fw fa-table"></i>
-          <span>KISEL BARU</span></a>
+          <span>MLINK</span></a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="{{ url('/kisel_selisih') }}">
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-table"></i>
-          <span>KISEL BARU SELISIH</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="{{ url('/hitung_nirwana') }}">
-          <i class="fas fa-fw fa-table"></i>
-          <span>HITUNGAN NIRWANA</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="{{ url('/nirwana_oto') }}">
-          <i class="fas fa-fw fa-table"></i>
-          <span>NIRWANA OTO</span></a>
+          <span>KISEL</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Kisel Component :</h6>
+            <a class="collapse-item" href="{{ url('/kisel_baru') }}">KISEL</a>
+            <a class="collapse-item" href="{{ url('/kisel_selisih') }}">KISEL SELISIH</a>
+          </div>
+        </div>
       </li>
 
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-table"></i>
+          <span>NIRWANA</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Nirwana Component :</h6>
+            <a class="collapse-item" href="{{ url('/hitung_nirwana') }}">HITUNGAN NIRWANA</a>
+            <a class="collapse-item" href="{{ url('/nirwana_oto') }}">NIRWANA OTO</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ url('/laporan') }}">
+          <i class="fas fa-fw fa-table"></i>
+          <span>LAPORAN</span></a>
+      </li>
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
@@ -97,50 +100,36 @@
       <!-- Main Content -->
       <div id="content">
 
-      <br>
-      
+        <br>
+
         @yield('konten')
 
-        </div>
-      <!-- End of Main Content -->
-
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Markaz Jalan Bersama 2019</span>
-          </div>
-        </div>
-      </footer>
-      <!-- End of Footer -->
-
+      </div>
     </div>
-    <!-- End of Content Wrapper -->
-
   </div>
-  <!-- End of Page Wrapper -->
+
 
   <script>
-	function printContent(el){
-		var restorepage = document.body.innerHTML;
-		var printcontent = document.getElementById(el).innerHTML;
-		document.body.innerHTML = printcontent;
-		window.print();
-		document.body.innerHTML = restorepage;
-	}
-	</script>
+    function printContent(el) {
+      var restorepage = document.body.innerHTML;
+      var printcontent = document.getElementById(el).innerHTML;
+      document.body.innerHTML = printcontent;
+      window.print();
+      document.body.innerHTML = restorepage;
+    }
+  </script>
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="js/sb-admin-2.min.js"></script>
+  <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
 
-  <!-- Page level plugins -->
-  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
-  <!-- Page level custom scripts -->
-  <script src="js/demo/datatables-demo.js"></script>
 
-  
 
 </body>
 

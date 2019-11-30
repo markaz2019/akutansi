@@ -5,30 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Report;
+use App\Carbon;
 use PDF;
 use App\Exports\ReportExport;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Controllers\Controller;
 
-class ReportController extends Controller
+class LaporanController extends Controller
 {
     public function index()
     {
-        return view('report');
-    }
-
-    public function cari(Request $request)
-    {
-        $from = $request->from;
-        $to = $request->to;
-        $title = "report From: " . $from . " To: " . $to;
-        $sales = Report::whereBetween('tanggal', [$from . ' 00:00:00', $to . ' 23:59:59'])->get();
-        return view('/cari', ['report' => $sales]);
-
-        $report = Report::join('tsel', 'data.modul_id', '=', 'tsel.modul_id')
-            ->select('tsel.modul_id as modul', 'data.nomor as nomor', 'data.modul_id as modul_id', 'data.jml_trx as jml_trx', 'data.spl as spl', 'data.saldo_awal as saldo_awal', 'data.deposit as deposit', 'data.pemakaian as pemakaian', 'data.saldo_akhir_cs as saldo_akhir_cs', 'data.selisih as selisih', 'data.jenis as jenis', 'data.tanggal as tanggal')
-            ->get();
-        dd($report);
 
         $report = Report::all();
         foreach ($report as $key => $value) {
@@ -51,7 +37,15 @@ class ReportController extends Controller
         $sum_pemakaian = array_sum($array_pemakaian);
         $sum_saldo_akhir_cs = array_sum($array_saldo_akhir_cs);
         $sum_selisih_akhir = array_sum($array_selisih_akhir);
-        return view('report', compact('report', 'sum_jml_trx', 'sum_spl', 'sum_saldo_awal', 'sum_selisih_trx', 'sum_saldo_awal', 'sum_deposit', 'sum_pemakaian', 'sum_saldo_akhir_cs', 'sum_selisih_akhir'));
+        return view('laporan', compact('report', 'sum_jml_trx', 'sum_spl', 'sum_saldo_awal', 'sum_selisih_trx', 'sum_saldo_awal', 'sum_deposit', 'sum_pemakaian', 'sum_saldo_akhir_cs', 'sum_selisih_akhir'));
+    }
+    public function cari(Request $request)
+    {
+        $from = $request->from;
+        $to = $request->to;
+        $title = "report From: " . $from . " To: " . $to;
+        $sales = Report::whereBetween('tanggal', [$from . ' 00:00:00', $to . ' 23:59:59'])->get();
+        return view('/cari_laporan', ['report' => $sales]);
     }
 
     public function cetak_pdf()

@@ -19,15 +19,15 @@
       <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
-          <input type="text" name="from" placeholder="Mulai" onfocus="(this.type='date')">
-          <input type="text" name="to" placeholder="Sampai" onfocus="(this.type='date')">
+          <input class="form_date" type="text" name="from" placeholder="Mulai" onfocus="(this.type='date')">
+          <input class="form_date" type="text" name="to" placeholder="Sampai" onfocus="(this.type='date')">
           <input class="btn btn-primary" type="submit" value="Cari">
         </div>
         <div class="col-1">
-          <a href="/cari_kisel/export_excel" class="btn btn-primary">Export To Excel</a>
+          <a href="/cari_kisel/export_excel" class="btn btn-primary">EXCEL</a>
         </div>
         <div class="col-1">
-          <button class="btn btn-primary" onclick="printContent('div1')">Print To PDF</button>
+          <button class="btn btn-primary" onclick="printContent('div1')">PRINT</button>
         </div>
         <div class="col-1"></div>
       </div>
@@ -82,5 +82,14 @@
   </div>
 
 </div>
+<style>
+  .form_date {
+    width: 32% !important;
+    height: 100% !important;
+    border: 1px solid #cccccc !important;
+    border-radius: 11px !important;
+    text-align: center !important;
+  }
+</style>
 <!-- /.container-fluid -->
 @endsection
