@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Report;
 use App\Carbon;
 use PDF;
-use App\Exports\ReportExport;
+use App\Exports\ReportExport5;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Controllers\Controller;
 
@@ -57,6 +57,6 @@ class LaporanController extends Controller
 
     public function export_excel()
     {
-        return Excel::download(new ReportExport, 'ReportSPL.xlsx');
+        return Excel::download(new ReportExport5, 'Report.xlsx');
     }
 }

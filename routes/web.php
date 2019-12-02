@@ -40,3 +40,5 @@ Route::get('/hitung_nirwana/export_excel', 'HitungNirwanaController@export_excel
 Route::get('/hitung_nirwana/export_excel', 'HitungNirwanaController@export_excel');
 Route::get('/mlink/export_excel', 'MlinkController@export_excel');
 Route::get('/mlink/export_excel', 'MlinkController@export_excel');
+Route::get('/cari_laporan/export_excel', 'MlinkController@export_excel');
+Route::get('/cari_laporan/export_excel', 'MlinkController@export_excel');

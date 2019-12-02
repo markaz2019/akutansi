@@ -24,7 +24,7 @@
                     <input class="btn btn-primary" type="submit" value="Cari">
                 </div>
                 <div class="col-1">
-                    <a href="/cari/export_excel" class="btn btn-primary">EXCEL</a>
+                    <a href="/cari_laporan/export_excel" class="btn btn-primary">EXCEL</a>
                 </div>
                 <div class="col-1">
                     <button class="btn btn-primary" onclick="printContent('div1')">PDF</button>
@@ -38,8 +38,8 @@
 
             <h3 align="center"> LAPORAN TELKOMSEL </h3>
             <br />
-            <h4>STATUS PENJUALAN MODUL H2H ALL SERVER</h4>
-            {{$report->$from()}};
+            <h4 align="center">STATUS PENJUALAN MODUL H2H ALL SERVER</h4>
+
             <br />
             <div class="table-responsive" id="div1">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

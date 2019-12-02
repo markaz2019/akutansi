@@ -57,7 +57,7 @@ class ReportController extends Controller
     public function cetak_pdf()
     {
         $pegawai = Report::all();
-        $pdf = PDF::loadview('cetak_pdf', ['pegawai' => $pegawai]);
+        $pdf = PDF::lo + adview('cetak_pdf', ['pegawai' => $pegawai]);
         return $pdf->download('laporan-pegawai-pdf');
     }
 

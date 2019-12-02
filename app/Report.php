@@ -17,6 +17,7 @@ class Report extends Model
 
 
     //relasi One to many
+
     public function get_kategori()
     {
         return $this->belongsTo('App\\Model\\Report', 'modal_id', 'modal');
