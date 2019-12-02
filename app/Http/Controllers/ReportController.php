@@ -35,7 +35,7 @@ class ReportController extends Controller
             $array_jml_trx[] = $value->jml_trx;
             $array_spl[] = $value->spl;
             $array_saldo_awal[] = $value->saldo_awal;
-            $array_selisih_trx[] = $value->selisih_trx + $value->spl;
+            $array_selisih_trx[] = $value->jml_trx + $value->spl;
             $array_saldo_awal[] = $value->saldo_awal;
             $array_deposit[] = $value->deposit;
             $array_pemakaian[] = $value->pemakaian;
@@ -54,6 +54,7 @@ class ReportController extends Controller
         return view('report', compact('report', 'sum_jml_trx', 'sum_spl', 'sum_saldo_awal', 'sum_selisih_trx', 'sum_saldo_awal', 'sum_deposit', 'sum_pemakaian', 'sum_saldo_akhir_cs', 'sum_selisih_akhir'));
     }
 
+<<<<<<< HEAD
     public function cetak_pdf()
     {
         $pegawai = Report::all();
@@ -61,6 +62,8 @@ class ReportController extends Controller
         return $pdf->download('laporan-pegawai-pdf');
     }
 
+=======
+>>>>>>> 8125ed69c49f2cf4684be7aaecf2c75e9f233a7b
     public function export_excel()
     {
         return Excel::download(new ReportExport, 'ReportSPL.xlsx');
