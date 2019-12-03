@@ -23,16 +23,6 @@
           <input class="form_date" type="text" name="to" placeholder="Sampai" onfocus="(this.type='date')">
           <input class="btn btn-primary" type="submit" value="Cari">
         </div>
-<<<<<<< HEAD
-=======
-        <div class="col-1">
-          <a href="/kisel_selisih/export_excel" class="btn btn-primary">Export To Excel</a>
-        </div>
-        <div class="col-1">
-          <button class="btn btn-primary" onclick="printContent('div1')">PRINT</button>
-        </div>
-        <div class="col-1"></div>
->>>>>>> 8125ed69c49f2cf4684be7aaecf2c75e9f233a7b
       </div>
     </form>
     <br /><br />

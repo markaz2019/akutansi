@@ -55,29 +55,18 @@
           <i class="fas fa-fw fa-table"></i>
           <span>MLINK</span></a>
       </li>
-<<<<<<< HEAD
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-table"></i>
           <span>KISEL</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-=======
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <i class="                "></i>
-          <span>KISEL</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
->>>>>>> 8125ed69c49f2cf4684be7aaecf2c75e9f233a7b
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Kisel Component :</h6>
             <a class="collapse-item" href="{{ url('/kisel_baru') }}">KISEL</a>
             <a class="collapse-item" href="{{ url('/kisel_selisih') }}">KISEL SELISIH</a>
           </div>
         </div>
-<<<<<<< HEAD
       </li>
 
 
@@ -98,21 +87,6 @@
         <a class="nav-link" href="{{ url('/laporan') }}">
           <i class="fas fa-fw fa-table"></i>
           <span>LAPORAN</span></a>
-=======
-      </li>
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <i class="                "></i>
-          <span>NIRWANA</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Kisel Component :</h6>
-            <a class="collapse-item" href="{{ url('/hitung_nirwana') }}">HITUNGAN NIRWANA</a>
-            <a class="collapse-item" href="{{ url('/nirwana_oto') }}">NIRWANA OTO</a>
-          </div>
-        </div>
->>>>>>> 8125ed69c49f2cf4684be7aaecf2c75e9f233a7b
       </li>
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
@@ -127,26 +101,8 @@
       <div id="content">
 
         <br>
-<<<<<<< HEAD
 
         @yield('konten')
-=======
-
-        @yield('konten')
-
-      </div>
-      <!-- End of Main Content -->
-
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Markaz Jalan Bersama 2019</span>
-          </div>
-        </div>
-      </footer>
-      <!-- End of Footer -->
->>>>>>> 8125ed69c49f2cf4684be7aaecf2c75e9f233a7b
 
       </div>
     </div>

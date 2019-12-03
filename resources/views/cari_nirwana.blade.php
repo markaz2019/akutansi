@@ -25,11 +25,7 @@
         </div>
         <div class="col-1"></div>
         <div class="col-1">
-<<<<<<< HEAD
           <a href="/cari_nirwana/export_excel" class="btn btn-primary">EXCEL</a>
-=======
-          <a href="/cari_nirwana/export_excel" class="btn btn-primary">Export Excel</a>
->>>>>>> 8125ed69c49f2cf4684be7aaecf2c75e9f233a7b
         </div>
         <div class="col-1">
           <button class="btn btn-primary" onclick="printContent('div1')">PRINT</button>
